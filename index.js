@@ -1,14 +1,22 @@
-document.getElementById("bored-bot").addEventListener("click", getIdea)
+/**
+Challenge: 
 
-function getIdea() {
-    fetch("https://www.boredapi.com/api/activity")
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data)
-            document.body.classList.add("fun")
-            document.getElementById("idea").textContent = data.activity
-            document.getElementById("title").textContent = "🦾 Happy Bot🦿"
-        })
+When the button is clicked, call out to the Bored API
+(URL: https://apis.scrimba.com/bored/api/activity)
+and replace the h4 with the activity from the API
+*/
+
+document.getElementById("bored-bot").addEventListener("click",getIdea)
+
+function getIdea(){
+fetch("https://apis.scrimba.com/bored/api/activity")
+.then(res=>res.json())
+.then(data=>{
+    console.log(data)
+    document.body.classList.add("fun")
+    document.getElementById("idea").textContent=data.activity
+    document.getElementById("title").textContent = "Happy Bot"
+})
 }
 
 
@@ -16,6 +24,20 @@ function getIdea() {
 
 
 
+// document.getElementById("bored-bot").addEventListener("click", getIdea);
+
+// function getIdea() {
+
+//   fetch("https://apis.scrimba.com/bored/api/activity")
+
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data)
+//       document.body.classList.add("fun");
+//       document.getElementById("idea").textContent = data.activity;
+//       document.getElementById("title").textContent = "Happy Bot";
+//     });
+// }
 
 
 
@@ -25,46 +47,30 @@ function getIdea() {
 
 
 
+// document.getElementById("bored-bot").addEventListener("click",getIdea)
 
+// function getIdea(){
+// fetch("https://apis.scrimba.com/bored/api/activity")
+// .then(res => res.json())
+// .then(data =>{
+//     document.getElementById("idea").textContent=data.activity
+//     document.body.classList.add("fun")
+//     document.getElementById("title").textContent= "Happy Bot"
+// })
+// }
 
+// document.getElementById("bored-bot").addEventListener("click", getIdea)
 
-/**
-Challenge: 
-
-When the button is clicked, call out to the Bored API
-(URL: https://apis.scrimba.com/bored/api/activity)
-and replace the h4 with the activity from the API
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function getIdea() {
+//     fetch("https://www.boredapi.com/api/activity")
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data)
+//             document.body.classList.add("fun")
+//             document.getElementById("idea").textContent = data.activity
+//             document.getElementById("title").textContent = "🦾 Happy Bot🦿"
+//         })
+// }
 
 // document.getElementById("bored-bot").addEventListener("click", function() {
 //     fetch("https://www.boredapi.com/api/activity")
